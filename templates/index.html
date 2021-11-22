@@ -1,0 +1,63 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="body-head">
+    <h2 class="heading">American Sign Language Recognizer</h2>
+    <div style="display:flex;">
+        <form id="upload-file" method="post" enctype="multipart/form-data" style="margin-top: 20px;">
+            <label for="imageUpload" class="upload-label upload-btn" >
+                Choose a file
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+        <div class="click-photo" style="height: fit-content; margin-top: 20px; margin-left:10px;">Click a photo</div>
+    </div>
+</div>
+
+
+
+<div class="body-container">
+    <div class="upload-section">
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div style="margin-left: 10px; margin-top: 1.3em;">
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict" style="width:100px; margin-bottom: 10px;display:block">Predict!</button>
+                <button type="button" class="btn btn-secondary btn-lg " id="btn-clear" style="width:100px; display: block;">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="take-section">
+        <div class="video-section" style="display:flex">
+            <div class="booth">
+                <video id="video" width="100%" height="100%" autoplay></video>
+            </div>
+            <div class="text-right" style="width:110px; margin-left:10px;">
+                <button class="btn btn-success start-btn btn-lg" style="display:block; margin-bottom: 10px; width:100%;">Start Cam</button>
+                <button class="btn btn-danger stop-btn btn-lg btn-primary" style="display:block; margin-bottom: 10px; width:100%;" disabled="true">Stop Cam</button>
+                <button class="btn btn-lg btn-primary btn-take-pic" style="display:block; width:100%" disabled="true">Take a picture</button>
+            </div>
+        </div>
+        <div class="img-display">
+            <img src="" id="clicked-img">
+            <form id="img-form" method="post" style="display:none">
+                <input type="file" id="filename" name="filename" /> <!-- Filename -->
+            </form>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict-img" style="width:100px;display:block">Predict!</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;" ></div>
+
+    <h3 id="result-section">
+        <span id="result" class="result" style="margin-right: 10px"> </span>
+        <i class="fas fa-volume-up" id="speaker" style="cursor: pointer;"></i>
+    </h3>
+
+</div>
+
+{% endblock %}
