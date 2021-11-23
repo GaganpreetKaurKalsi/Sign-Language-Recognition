@@ -174,3 +174,8 @@ input[type="file"] {
     flex-direction: row-reverse;
     justify-content: space-between;
 }
+
+.link, .link:hover{
+    text-decoration: none;
+    color: white;
+}

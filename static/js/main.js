@@ -81,6 +81,7 @@ $(document).ready(function () {
         $('#btn-predict').show();
         $('#result').text('');
         $('#result-section').hide();
+        $('#btn-predict-img').hide();
         readURL(this);
     });
 

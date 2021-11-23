@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/d733855d1a.js" crossorigin="anonymous"></script>
+</head>
+
+<body> 
+  <!-- contact1 -->
+  <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-wrapper">
+            <div class="container-nav">
+                <a class="navbar-brand" href="/"><i class="fas fa-sign-language" style="margin-right: 10px; font-size: 25px;"></i> Sign Language Recognizer</a>
+            </div>
+            <div class="link-container">
+                <ul>
+                    <li><a href="/" class="link">Home</a></li>
+                    <li><a href="/about" class="link">About Project</a></li>
+                    <li><a href="/contact" class="link">Contact Us</a></li>
+                    <li><a href="/team" class="link">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <section class="w3l-simple-contact-form1">
+    <div class="contact-form section-gap">
+      <div class="wrapper">
+        <div class="text-center">
+        <h1 style="font-size: 40px; " >Contact Us</h1>
+      </div>
+        <div class="contact-form" style="max-width: 450px; margin: 0 auto;">
+          <div class="form-mid">
+            <form action="javascript:sendmail()" method="post">
+              <div class="field">
+                <input type="text" class="form-control" name="Name" id="Name" placeholder="ENTER YOUR NAME" required="">
+              </div>
+              <div class="field">
+                <input type="email" class="form-control" name="Sender" id="Sender" placeholder="ENTER YOUR EMAIL"
+                  required="">
+              </div>
+              <div class="field">
+                <input type="text" class="form-control" name="Subject" id="Subject" placeholder="ENTER YOUR SUBJECT"
+                  required="">
+              </div>
+              <textarea name="Message" class="form-control" id="Message" placeholder="ENTER YOUR MESSAGE"
+                required=""></textarea>
+              <button type="submit" class="btn btn-contact">Send Message</button>
+              <!-- <input type="button" class="btn btn-contact" onclick="sendmail();"  value="Send Message"> -->
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /contact1 -->
+  
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script>  
+
+     function sendmail(){
+    
+			var name = $('#Name').val();
+			var email = $('#Sender').val();
+			var subject = $('#Subject').val();
+      var message = $('#Message').val();
+
+			// var body = $('#body').val();
+
+			var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+			//console.log(name, phone, email, message);
+
+			Email.send({
+        SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+				To: 'sharmasumeer03@gmail.com',
+				From: "demooptimalweb@gmail.com",
+				Subject: "New message on contact from "+name,
+				Body: Body
+			}).then(
+				message =>{
+					//console.log (message);
+					if(message=='OK'){
+					alert('Your mail has been send. Thank you for connecting.');
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+ </script>
+
+</body>
+</html>
