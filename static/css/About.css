@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+.link, .link:hover{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    max-width: 1000px !important;
+    width: 90%;
+    margin:auto;
+    padding: 15px;
+    background-color: rgb(255, 250, 250);
+    margin-top: 50px;
+}
+h1{
+    color: rgb(8, 8, 12);
+    margin:10px 0;
+    font-size: 35px;
+    padding: 10px 0;
+    font-weight: bolder !important;
+}
+.heading {
+    color: rgb(87, 83, 83);
+    margin:10px;
+    font-size: 25px;
+    padding: 10px;
+}
+.heading p{
+    font-size: 16px;
+}
+.heading li {
+    font-size: 14px;
+}
+.sub-head{
+    font-size: 20px;
+    font-weight: bold;
+}
+#image{
+    height: 400px;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading img {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+#heading5 img {
+    height: 250px;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#heading6 img {
+    height: 300px;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#heading7 img {
+    height: 200px;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+}
+.mediapipe{
+    height: 180px !important;
+    width: fit-content !important;
+}
+.dataset{
+    height: fit-content !important;
+    width: fit-content !important;
+    margin: 20px auto !important;
+}
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin:auto;
+}
+.link-container ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    color: white;
+    height: 100%;
+    margin-bottom: 0;
+}
+.link-container ul li{
+    margin: 0 20px;
+    align-self: center;
+    font-size: 14px;
+}
+
+.navbar-wrapper .container-nav{
+    width: fit-content;
+    margin-left: 0;
+}

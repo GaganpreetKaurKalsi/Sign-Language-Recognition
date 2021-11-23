@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.link, .link:hover{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    background: url('/static/images/background-img.jpg');
+    background-size: cover;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+    margin-top: 2%;
+}
+
+.wrapper h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #ffffff;
+    text-shadow: 10px 15px 20px #000000;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.team{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-members{
+    background-color: #ffffff;
+    margin: 40px;
+    margin-bottom: 40px;
+    width: 320px;
+    padding: 15px;
+    color: #333131;
+    position: relative;
+    border: 3px solid #E08306;
+    border-radius: 20px;
+    padding-top: 50px;
+}
+
+h3{
+    color: #E08306;
+    text-shadow: 5px 0px 10px #b16b1a;
+    font-size: 20px !important;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+p{
+    text-align: center;
+    word-break: break;
+}
+
+.team-members a{
+    margin: 0 25px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.team-members a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.linkedin{
+    color: #ffffff;
+    background-color: #0073b1;
+    padding: 5px 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.github{
+    color: #ffffff;
+    background-color: #000000;
+    padding: 5px 10px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 50px;
+    border: 3px double #E08306;
+}
+
+.navbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin:auto;
+}
+.link-container ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    color: white;
+    height: 100%;
+    margin-bottom: 0;
+}
+.link-container ul li{
+    margin: 0 20px;
+    align-self: center;
+    font-size: 14px;
+}
+
+.navbar-wrapper .container-nav{
+    width: fit-content;
+    margin-left: 0;
+}

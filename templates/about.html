@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/About.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d733855d1a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-wrapper">
+            <div class="container-nav">
+                <a class="navbar-brand" href="/"><i class="fas fa-sign-language" style="margin-right: 10px; font-size: 25px;"></i> Sign Language Recognizer</a>
+            </div>
+            <div class="link-container">
+                <ul>
+                     <li><a href="/" class="link">Home</a></li>
+                    <li><a href="/about" class="link">About Project</a></li>
+                    <li><a href="/contact" class="link">Contact Us</a></li>
+                    <li><a href="/team" class="link">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="width:fit-content;margin:auto;margin-top: 100px;font-weight: bold;">
+        About project
+        <h1>
+            SIGN LANGUAGE RECOGNIZER
+        </h1>
+    </div>
+
+    <div class="container">
+        <div class="heading"><b>Introduction : </b>
+            <p>Sign Language Recogniser is the system which recognize the sign and display the same on the screen as
+                    well as voice the sign.It is an end-to-end custom object detection model that allows you to
+                    translate sign language in real time. With the help of this system we can easily recognize signs
+                    which include motion. Moreover, we will focus on converting the sequence of gestures into text i.e.
+                    word and sentences and then converting it into the speech which can be heard.</p>
+        </div>
+
+        <div class="heading"><b>Hardware & Software Requirements :</b>
+            <p>The Hardware & Software requirements you should require for this system is as following: </p>
+            <ul>
+                <li> A virtual machine (Windows or MacOS)</li>
+                <li> Python 3.5-3.7</li>
+                <li> IDE </li>
+                <li>Keras(2.3)</li>
+                <li>Tensorflow </li>
+                <li>Open CV Library</li>
+            </ul>
+        </div>
+
+        <div class="heading"><b>Pictorial Representation :</b>
+            <p>Figure below is the flowchart for this project which shows that how we reach our target.</p>
+            <img id="image" src="{{ url_for('static', filename='images/Flowchart.png') }}" alt="" srcset="">
+        </div>
+
+        <div class="heading" style="margin-top: 50px;"><b>Steps to create Sign Language Recognizer :</b> <br> <br>
+            <div class="sub-head">Creating Dataset :</div>
+            <p>The first step of the proposed system is to collect data. It is fairly possible to get the dataset we
+                    need on the internet but in this project, we will be creating the dataset according to ASL(American
+                    Sign Language) on our own.The dataset is made by collecting images of hand gestures in real-time.
+                    Images will be taken on the basis of various parameters such as different angles, with different
+                    skin colour and with different backgrounds in order to get better accuracy while training.</p>
+            <p> Following are some images from our created dataset:</p>
+            <div style="display:flex; justify-content: space-between;">
+                <img class="dataset" src="{{ url_for('static', filename='images/Dset1.png') }}" alt="" srcset="">
+                <img class="dataset" src="{{ url_for('static', filename='images/Dset2.png') }}" alt="" srcset="">
+                <img class="dataset" src="{{ url_for('static', filename='images/Dset3.png') }}" alt="" srcset="">
+            </div>
+        </div>
+
+        <div class="heading" id="heading5"><div class="sub-head">Model Selection :</div>
+            <p>In this Project we have used ANN(Artificial Neural Network) Model.As ANN is ideal for solving problems
+                    regarding data.Forward-facing algorithms can easily be used to process image data, text data, and
+                    tabular data.It would also get you virtually the same accuracy rate as using CNN for data
+                    classification problems.Use of ANN Model makes machine intelligent as ANN makes a decision by
+                    observing its environment. If the observation is negative, the network adjusts its weights to be
+                    able to make a different required decision the next time.</p>
+            <img src="{{ url_for('static', filename='images/Ann1.png') }}" alt="" srcset="">
+        </div>
+
+        <div class="heading" id="heading6"><div class="sub-head">Training :</div>
+            <p>For Training purpose the algorithms we used here are :</p>
+            <p>CNN(CONVOLUTIONAL NEURAL NETWORK)</p>
+            <p>     It is a deep neural networks used to process data that have a grid-like topology, e.g. images that
+                    can be represented as a 2-D array of pixels. Thus,this will be best for training the model since our
+                    project revolves around images. Due to this, CNN will be able to take advantage the architecture can
+                    be constrained in a sensible way with images as input explicitly; an arrangement of neurons is done
+                    in 3 dimensions:width, depth and height. Depth means the volume required for activation. After
+                    defining our model, we will compile and train the CNN model</p>
+
+            <p>ANN(ARTIFICIAL NEURAL NETWORK) </p>
+            <p>Artificial Neural network is typically organized in layers. Layers are being made up of many
+                    interconnected ‘nodes’ which contain an ‘activation function’. A neural network may contain the
+                    following 3 layers:</p>
+            <ul>
+                <li> INPUT LAYER :- The purpose of the input layer is to receive as input the values of the
+                        explanatory
+                        attributes for each observation. Usually, the number of input nodes in an input layer is equal
+                        to the
+                        number of explanatory variables. ‘input layer’ presents the patterns to the network, which
+                        communicates to one or more ‘hidden layers’. The nodes of the input layer are passive, meaning
+                        they do not change the data. They receive a single value on their input and duplicate the value
+                        to
+                        their many outputs. From the input layer, it duplicates each value and sent to all the hidden
+                        nodes.</li>
+                <li>  HIDDEN LAYER :- The Hidden layers apply given transformations to the input values inside the
+                        network. In this, incoming arcs that go from other hidden nodes or from input nodes connected to
+                        each node. It connects with outgoing arcs to output nodes or to other hidden nodes. In hidden
+                        layer,
+                        the actual processing is done via a system of weighted ‘connections’. There may be one or more
+                        hidden layers. The values entering a hidden node multiplied by weights, a set of predetermined
+                        numbers stored in the program. The weighted inputs are then added to produce a single
+                        number.</li>
+                <li>  OUTPUT LAYER :- The hidden layers then link to an ‘output layer‘. Output layer receives
+                        connections from hidden layers or from input layer. It returns an output value that corresponds
+                        to
+                        the prediction of the response variable. In classification problems, there is usually only one
+                        output
+                        node. The active nodes of the output layer combine and change the data to produce the output
+                        values. The ability of the neural network to provide useful data manipulation lies in the proper
+                        selection of the weights. This is different from conventional information processing</li>
+            </ul>
+            <img src="{{ url_for('static', filename='images/Ann.png') }}" alt="" srcset="">
+
+            <p style="margin-top:30px;">MEDIAPIPES </p>
+            <p>MediaPipe is a cross-platform framework for building multimodal applied machine learning pipelines.
+                    MediaPipe is a framework for building multimodal (eg. video, audio, any time series data), cross
+                    platform (i.e Android, iOS, web, edge devices) applied ML pipelines.The MediaPipe pipeline utilizes
+                    multiple models like, a palm detection model that returns an oriented hand bounding box from the
+                    full image. The cropped image region is fed to a hand landmark model defined by the palm detector
+                    and returns high-fidelity 3D hand key points. Below image shows implementation of this process:
+            </p>
+            <img class="mediapipe" src="{{ url_for('static', filename='images/mediapipe.png') }}" alt="" srcset="">
+        </div>
+
+        <div class="heading" id="heading7"><b>TESTING :</b>
+        <p>  These are the screenshots which shows the working of the system.</p>
+        <img src="{{ url_for('static', filename='images/A.png') }}" alt="" srcset="">
+        <img src="{{ url_for('static', filename='images/B.png') }}" alt="" srcset="">
+        <img src="{{ url_for('static', filename='images/C.png') }}" alt="" srcset="">
+        <img src="{{ url_for('static', filename='images/D.png') }}" alt="" srcset="">
+        <img src="{{ url_for('static', filename='images/W.png') }}" alt="" srcset="">
+        </div>
+    </div>
+
+</body>
+
+</html>

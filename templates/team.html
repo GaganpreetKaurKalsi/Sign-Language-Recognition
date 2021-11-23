@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!--Font-awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d733855d1a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navbar-wrapper">
+            <div class="container-nav">
+                <a class="navbar-brand" href="/"><i class="fas fa-sign-language" style="margin-right: 10px; font-size: 25px;"></i> Sign Language Recognizer</a>
+            </div>
+            <div class="link-container">
+                <ul>
+                    <li><a href="/" class="link">Home</a></li>
+                    <li><a href="/about" class="link">About Project</a></li>
+                    <li><a href="/contact" class="link">Contact Us</a></li>
+                    <li><a href="/team" class="link">Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <h1>Project Team</h1>
+        <div class="team">
+               
+            <div class="team-members">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='images/gagandp.jpg') }}" alt="gaganpreet kaur kalsi">
+                </div>
+                <h3>Gaganpreet Kaur Kalsi</h3>
+                    <p>Email - gagansinghkalsi4126@gmail.com</p>
+                    <div style="display: flex; justify-content: space-between;">
+                        <a href="https://www.linkedin.com/in/gaganpreet-kaur-kalsi-2a6650191/" class="linkedin">Linkedin</a>
+                        <a href="https://github.com/GaganpreetKaurKalsi" class="github">Github</a>
+                    </div>
+            </div>
+            <div class="team-members">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='images/ujwaldp.jpg') }}" alt="ujwal garg">
+                </div>
+                <h3>Ujwal Garg</h3> 
+                <p>Email - cse.19bcs6035@gmail.com</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="https://www.linkedin.com/in/ujwal-garg-449974198/" class="linkedin">Linkedin</a>
+                    <a href="https://github.com/Ujwalgarg2387" class="github">Github</a>
+                </div>
+            </div>
+            <div class="team-members">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='images/medp.jpg') }}" alt="yuvraj singh yadav">
+                </div>
+                <h3>Yuvraj Singh Yadav</h3> 
+                <p>Email - yuvraj150a@gmail.com</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="https://www.linkedin.com/in/yuvraj-singh-yadav-840249200/" class="linkedin">Linkedin</a>
+                    <a href="https://github.com/YuvrajSinghYadav" class="github">Github</a>
+                </div>
+            </div>
+            <div class="team-members">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='images/sumeerdp.jpg') }}" alt="sumeer sharma">
+                </div>
+                <h3>Sumeer Sharma</h3> 
+                <p>Email -  19BCS6018@cuchd.in</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="https://www.linkedin.com/in/sumeer-sharma-2b9009194/" class="linkedin">Linkedin</a>
+                    <a href="https://github.com/sumeer-123" class="github">Github</a>
+                </div>
+            </div>
+            <div class="team-members">
+                <div class="team-img">
+                    <img src="{{ url_for('static', filename='images/avishidp.jpg') }}" alt="avishi sharma">
+                </div>
+                <h3>Avishi Sharma</h3> 
+                <p>Email -  19BCS6020@cuchd.in</p>
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="https://www.linkedin.com/in/avishi-sharma-93b398190/" class="linkedin">Linkedin</a>
+                    <a href="#" class="github">Github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
