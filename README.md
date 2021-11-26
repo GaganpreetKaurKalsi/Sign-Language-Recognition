@@ -9,3 +9,6 @@ A project that will help you convert sign language to english alphabets. We have
 **Dataset Used**
 
 The dataset used for training the project is a self developed one. We used mediapipe to create the same. Below are some pics of the dataset.
+
+
+<img src="./SignLanguageDataset.png" style="height: 400px;">
