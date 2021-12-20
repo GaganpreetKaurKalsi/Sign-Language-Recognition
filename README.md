@@ -1,5 +1,6 @@
 # Sign-Language-Recognition Project
 
+<div align="center"><img src="./ASL.png" style="height: 300px;"></div>
 <br>
 
 ## Introduction
@@ -21,3 +22,7 @@ I have got a very positive output with this dataset which was quite unexpected. 
 <br>
 
 <img src="./SignLanguageDataset.png" style="height: 450px;">
+
+## Limitations
+- Detecting only right hand
+- Covering A-Z alphabets
