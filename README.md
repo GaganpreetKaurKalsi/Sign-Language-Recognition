@@ -33,3 +33,9 @@ I did get a very positive output with this dataset which was quite unexpected. T
 - Implement recognition for both hands.
 - Increase scope from only alphabets to alphabets+numbers.
 - Sentence creation in realtime.
+
+
+## Demo Video
+
+https://user-images.githubusercontent.com/54144759/176778683-2706bd2a-34da-4f95-989b-9527d11b5d8c.mp4
+
