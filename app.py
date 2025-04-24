@@ -95,8 +95,12 @@ def applyHandPointsVideo(img_path):
                     img = img[start_point[1]:end_point[1], start_point[0]:end_point[0]]
                 print(img.shape)
                 print(counter)
-                imgPath = './images/marked/Y/img' + str(counter) + '.png'
-                skeletonPath = './images/skeleton/Y/img' + str(counter) + '.png'
+                # Ensure the directories exist
+                os.makedirs('./images/marked', exist_ok=True)
+                os.makedirs('./images/skeleton', exist_ok=True)
+                
+                imgPath = './images/marked/img' + str(counter) + '.png'
+                skeletonPath = './images/skeleton/img' + str(counter) + '.png'
                 cv2.imwrite(imgPath, annotated_image)
                 cv2.imwrite(skeletonPath, img)
                 counter += 1
@@ -165,8 +169,10 @@ def applyHandPointsUpload(img_path):
                     img = img[start_point[1]:end_point[1], start_point[0]:end_point[0]]
                 print(img.shape)
                 print(counter)
-                imgPath = './images/marked/test/img' + str(counter) + '.png'
-                skeletonPath = './images/skeleton/test/img' + str(counter) + '.png'
+                os.makedirs('./images/skeleton', exist_ok=True)
+                os.makedirs('./images/marked', exist_ok=True)
+                imgPath = './images/marked/img' + str(counter) + '.png'
+                skeletonPath = './images/skeleton/img' + str(counter) + '.png'
                 cv2.imwrite(imgPath, annotated_image)
                 cv2.imwrite(skeletonPath, img)
                 counter += 1
